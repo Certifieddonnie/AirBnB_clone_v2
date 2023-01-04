@@ -1,5 +1,8 @@
 <center> <h1>HBNB - The Console</h1> </center>
 
+![65f4a1dd9c51265f49d0](https://user-images.githubusercontent.com/81980032/210469244-4220b9ad-f543-4656-9ef2-0c68334e0674.png)
+
+
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
 ---
@@ -140,3 +143,19 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
+
+
+# **0x02. AirBnB clone - MySQL**
+
+## Background Context
+
+Environment variables will be your best friend for this project!
+- HBNB_ENV: running environment. It can be “dev” or “test” for the moment (“production” soon!)
+- HBNB_MYSQL_USER: the username of your MySQL
+- HBNB_MYSQL_PWD: the password of your MySQL
+- HBNB_MYSQL_HOST: the hostname of your MySQL
+- HBNB_MYSQL_DB: the database name of your MySQL
+- HBNB_TYPE_STORAGE: the type of storage used. It can be “file” (using FileStorage) or db (using DBStorage)
+
+
+![hbnb_step2](https://user-images.githubusercontent.com/81980032/210469571-cc7024b7-4364-433b-b176-f67edf20ec20.png)
