@@ -57,5 +57,96 @@
         "latitude": 37.773972,
         "longitude": -122.431297,
         "__class__": "Place"
+    },
+    "Place.93133ada-3fb1-4679-a3a2-0567faee6d98": {
+        "id": "93133ada-3fb1-4679-a3a2-0567faee6d98",
+        "created_at": "2023-01-04T20:41:30.206789",
+        "updated_at": "2023-01-04T20:41:30.207825",
+        "name": "Emmanuel",
+        "email": "emmaz.com",
+        "__class__": "Place"
+    },
+    "Place.1b7d3649-af93-47b7-92df-e4072eeffc27": {
+        "id": "1b7d3649-af93-47b7-92df-e4072eeffc27",
+        "created_at": "2023-01-04T20:43:44.883825",
+        "updated_at": "2023-01-04T20:43:44.884512",
+        "name": "Emmanuel",
+        "email": "emmaz.com",
+        "__class__": "Place"
+    },
+    "User.77822ff6-79e7-4de9-9df5-e4dd24327fd7": {
+        "id": "77822ff6-79e7-4de9-9df5-e4dd24327fd7",
+        "created_at": "2023-01-04T20:49:47.971190",
+        "updated_at": "2023-01-04T20:49:47.971203",
+        "__class__": "User"
+    },
+    "Place.499beb30-2f0b-4b69-9f89-918b72e952d2": {
+        "id": "499beb30-2f0b-4b69-9f89-918b72e952d2",
+        "created_at": "2023-01-04T20:53:31.579782",
+        "updated_at": "2023-01-04T20:53:31.580531",
+        "name": "Emmanuel",
+        "email": "emmaz.com",
+        "__class__": "Place"
+    },
+    "User.7b9be1f9-3fab-44ec-a005-c19da133c599": {
+        "id": "7b9be1f9-3fab-44ec-a005-c19da133c599",
+        "created_at": "2023-01-04T20:56:07.079728",
+        "updated_at": "2023-01-04T20:56:07.080467",
+        "name": "Emmanuel",
+        "email": "emmaz.com",
+        "__class__": "User"
+    },
+    "User.86e1219a-4e56-4410-bfe9-5b84356175ff": {
+        "id": "86e1219a-4e56-4410-bfe9-5b84356175ff",
+        "created_at": "2023-01-04T20:58:34.766964",
+        "updated_at": "2023-01-04T20:58:34.768036",
+        "name": "Emmanuel",
+        "email": "emmaz.com",
+        "__class__": "User"
+    },
+    "User.a977c9b4-40af-4700-9563-38b45c749d99": {
+        "id": "a977c9b4-40af-4700-9563-38b45c749d99",
+        "created_at": "2023-01-04T20:59:44.806121",
+        "updated_at": "2023-01-04T20:59:44.806874",
+        "name": "Emmanuel",
+        "email": "emmaz.com",
+        "number": "+23481565383637",
+        "__class__": "User"
+    },
+    "User.ce4d9e9b-8fb5-4b4d-91e5-49b14967e186": {
+        "id": "ce4d9e9b-8fb5-4b4d-91e5-49b14967e186",
+        "created_at": "2023-01-04T21:04:43.943187",
+        "updated_at": "2023-01-04T21:04:43.944279",
+        "full_name": "Emmanuel Nwafor",
+        "email": "emmaz.com",
+        "number": "+23481565383637",
+        "__class__": "User"
+    },
+    "User.09a6f3c5-39bc-432b-8865-625cb31a8a3f": {
+        "id": "09a6f3c5-39bc-432b-8865-625cb31a8a3f",
+        "created_at": "2023-01-04T21:06:15.419631",
+        "updated_at": "2023-01-04T21:06:15.420616",
+        "full_name": "Emmanuel Nwafor",
+        "email": "emmaz.com",
+        "number": "+23481565383637",
+        "__class__": "User"
+    },
+    "User.51ac24d0-2d30-4369-a291-e9dcdabd21bc": {
+        "id": "51ac24d0-2d30-4369-a291-e9dcdabd21bc",
+        "created_at": "2023-01-04T21:10:56.802567",
+        "updated_at": "2023-01-04T21:10:56.803350",
+        "full_name": "Emmanuel Nwafor",
+        "email": "emmaz.com",
+        "longitude": 12.4,
+        "__class__": "User"
+    },
+    "User.bd10bdfa-f140-4a2b-bc94-58ef4204212f": {
+        "id": "bd10bdfa-f140-4a2b-bc94-58ef4204212f",
+        "created_at": "2023-01-04T21:12:07.620135",
+        "updated_at": "2023-01-04T21:12:07.621129",
+        "full_name": "Emmanuel Nwafor",
+        "email": "emmaz.com",
+        "number": "12.3",
+        "__class__": "User"
     }
 }
