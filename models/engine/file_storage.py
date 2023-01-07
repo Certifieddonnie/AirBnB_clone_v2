@@ -13,7 +13,7 @@ class FileStorage:
         if cls:
             temp = {}
             for key, val in (self.__objects).items():
-                if type(val) is cls:
+                if isinstance(type(val), cls):
                     temp[key] = val
             return temp
         return FileStorage.__objects

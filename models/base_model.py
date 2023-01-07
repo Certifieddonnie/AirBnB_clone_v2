@@ -24,10 +24,10 @@ class BaseModel:
             self.updated_at = datetime.now()
         else:
             for key, value in kwargs.items():
-                if key is 'updated_at':
+                if key == 'updated_at':
                     kwargs[key] = datetime.strptime(kwargs['updated_at'],
                                                      '%Y-%m-%dT%H:%M:%S.%f')
-                elif key is 'created_at':
+                elif key == 'created_at':
                     kwargs[key] = datetime.strptime(kwargs['created_at'],
                                                      '%Y-%m-%dT%H:%M:%S.%f')
                 else:
