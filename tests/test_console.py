@@ -7,10 +7,26 @@ import unittest
 from unittest.mock import patch
 from console import HBNBCommand
 from io import StringIO
+import console
 
 
 class TestConsole(unittest.TestCase):
     """ Class for Testing the Console. """
+
+    def test_docstrings_in_console(self):
+        """checking for docstrings"""
+        self.assertIsNotNone(console.__doc__)
+        self.assertIsNotNone(HBNBCommand.emptyline.__doc__)
+        self.assertIsNotNone(HBNBCommand.do_quit.__doc__)
+        self.assertIsNotNone(HBNBCommand.do_EOF.__doc__)
+        self.assertIsNotNone(HBNBCommand.do_create.__doc__)
+        self.assertIsNotNone(HBNBCommand.do_show.__doc__)
+        self.assertIsNotNone(HBNBCommand.do_destroy.__doc__)
+        self.assertIsNotNone(HBNBCommand.do_all.__doc__)
+        self.assertIsNotNone(HBNBCommand.do_update.__doc__)
+        self.assertIsNotNone(HBNBCommand.count.__doc__)
+        self.assertIsNotNone(HBNBCommand.strip_clean.__doc__)
+        self.assertIsNotNone(HBNBCommand.default.__doc__)
 
     def test_help(self):
         """Testing the help funcs of my commands."""
@@ -704,7 +720,7 @@ class TestConsole(unittest.TestCase):
             HBNBCommand().onecmd(f"Review.show({model_id})")
         self.assertIn('third', f.getvalue())
         self.assertIn('second', f.getvalue())
-    
+
     def test_createwithparams(self):
         """Testing the create command with parameters."""
         with patch('sys.stdout', new=StringIO()) as f:
@@ -717,13 +733,19 @@ class TestConsole(unittest.TestCase):
             HBNBCommand().onecmd('create Amenity name="Air_Conditional"')
         self.assertIsInstance(f.getvalue(), str)
         with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd('create Place city_id="0001" user_id="0001" name="My_little_house" number_rooms=4 number_bathrooms=2 max_guest=10 price_by_night=300 latitude=37.773972 longitude=-122.431297')
+            HBNBCommand().onecmd('create Place city_id="0001"\
+                 user_id="0001" name="My_little_house"\
+                 number_rooms=4 number_bathrooms=2 max_guest=10\
+                     price_by_night=300\
+                    latitude=37.773972 longitude=-122.431297')
         self.assertIsInstance(f.getvalue(), str)
         with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd('create Review place_id="0001" user_id="0001" text="This Place was Great!"')
+            HBNBCommand().onecmd('create Review place_id="0001"\
+                 user_id="0001" text="This Place was Great!"')
         self.assertIsInstance(f.getvalue(), str)
         with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd('create User email="mcdnald@gmail.com" password="ggvvavivid75" first_name="Paul" last_name="Mark"')
+            HBNBCommand().onecmd('create User email="mcdnald@gmail.com"\
+                 password="ggvvavivid75" first_name="Paul" last_name="Mark"')
         self.assertIsInstance(f.getvalue(), str)
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("create")
@@ -731,7 +753,6 @@ class TestConsole(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("create MyModel")
         self.assertEqual(f.getvalue(), '** class doesn\'t exist **\n')
-
 
 
 if __name__ == '__main__':
