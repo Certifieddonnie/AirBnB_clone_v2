@@ -20,7 +20,7 @@ AirBnb Clone
 <body>
 Welcome to AirBnb Clone
 </body>
-</html>" > '/data/web_static/releases/test/index.html'
+</html>" | sudo tee '/data/web_static/releases/test/index.html'
 
 # Create a symbolic link
 sudo ln -s -f /data/web_static/releases/test/ /data/web_static/current

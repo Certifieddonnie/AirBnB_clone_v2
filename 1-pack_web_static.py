@@ -3,13 +3,15 @@
 contents of the web_static folder of your AirBnb Clone.
 """
 from fabric.api import local
-from time import strftime
+from datetime import datetime
 
 
 def do_pack():
     """ The Function that generates .tgz archive"""
 
-    time = strftime("%Y%m%d%H%M%S")
+    now = datetime.now()
+
+    time = now.strftime("%Y%m%d%H%M%S")
     try:
         local("mkdir -p versions")
         local(f"tar -czvf versions/web_static_{time}.tgz web_static")
