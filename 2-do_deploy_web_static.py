@@ -20,31 +20,30 @@ def do_deploy(archive_path):
         # upload archive
         put(archive_path, '/tmp/')
         # create target dir
-        timestamp = archive_path[-18:-4]
-        run('sudo mkdir -p /data/web_static/releases/web_static_{}/'
-            .format(timestamp))
+        arc = archive_path.split("/")
+        base = arc[-1].strip('.tgz')
+        # timestamp = archive_path[-18:-4]
+        sudo('mkdir -p /data/web_static/releases/{}/'
+             .format(base))
 
         # uncompress archive and delete .tgz
-        run('sudo tar -xzf /tmp/web_static_{}.tgz -C /data/web_static/releases\
-            /web_static_{}/'.format(timestamp, timestamp))
+        pat = '/data/web_static/releases/'
+        sudo('tar -xzf /tmp/{0}.tgz -C {1}{0}/'.format(base, pat))
 
         # remove archive
-        run('sudo rm /tmp/web_static_{}.tgz'.format(timestamp))
+        sudo('rm /tmp/{}.tgz'.format(base))
 
         # move contents into host web_static
-        run('sudo mv /data/web_static/releases/web_static_{}/web_static/* \
-            /data/web_static/releases/web_static_{}/'
-            .format(timestamp, timestamp))
+        sudo('mv -f {1}{0}/web_static/* {1}{0}/'.format(base, pat))
         # remove extraneous web_static dir
-        run('sudo rm -rf /data/web_static/releases/web_static_{}/web_static'
-            .format(timestamp))
+        sudo('rm -rf {1}{0}/web_static'.format(base, pat))
         # delete pre-existing sym link
-        run('sudo rm -rf /data/web_static/current')
+        sudo('rm -rf /data/web_static/current')
 
         # re-establish symbolic link
-        run('sudo ln -s /data/web_static/releases/web_static_{}/ \
-            /data/web_static/current'.format(timestamp))
-    except Exception:
+        sudo('sudo ln -s {1}{0} /data/web_static/current'.format(base, pat))
+    except Exception as e:
+        print(e)
         return False
 
     # return True on success
