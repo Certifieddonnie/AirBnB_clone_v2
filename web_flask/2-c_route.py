@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """
 A script that starts a Flask web application:
-/c/<text>: display “C ” followed by the value of the
-text variable (replace underscore _ symbols with a
-space )
 """
 
 from flask import Flask, request
